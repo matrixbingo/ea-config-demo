@@ -1,0 +1,155 @@
+{
+  "code": 200,
+  "msg": [
+    {
+      "header": "实时监控",
+      "className": "fa-dashboard",
+      "items": [
+        {
+          "className": "fa-laptop",
+          "title": "M页面加载评价延时",
+          "href": "/index.html#/MRealTimePage",
+          "children": [
+            {
+              "title": "深度检测",
+              "href": "index"
+            },
+            {
+              "title": "MRealTimePage",
+              "href": "boxed"
+            }
+          ]
+        },
+        {
+          "className": "fa-files-o",
+          "title": "APP借贷",
+          "href": "/index.html#/AppRealTimePage",
+          "children": [
+            {
+              "title": "Borrowing",
+              "href": "index"
+            },
+            {
+              "title": "审核",
+              "href": "boxed"
+            }
+          ]
+        },
+        {
+          "className": "fa-files-o",
+          "title": "Layout",
+          "children": [
+            {
+              "title": "Top Navigation",
+              "href": "index"
+            },
+            {
+              "title": "邮件营销1",
+              "href": "boxed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "header": "创新业务大盘",
+      "className": "fa-dashboard",
+      "items": [
+        {
+          "className": "fa-laptop",
+          "title": "客户",
+          "href": "/index.html#/MRealTimePage",
+          "children": [
+            {
+              "title": "老客户",
+              "href": "index"
+            },
+            {
+              "title": "新客户",
+              "href": "boxed"
+            }
+          ]
+        },
+        {
+          "className": "fa-files-o",
+          "title": "APP详单监控",
+          "href": "/index.html#/AppRealTimePage",
+          "children": [
+            {
+              "title": "成标数据",
+              "href": "index"
+            },
+            {
+              "title": "金额汇总",
+              "href": "boxed"
+            }
+          ]
+        },
+        {
+          "className": "fa-files-o",
+          "title": "发标",
+          "children": [
+            {
+              "title": "PC发标",
+              "href": "index"
+            },
+            {
+              "title": "APP发标",
+              "href": "boxed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "header": "城市贷",
+      "className": "fa-dashboard",
+      "items": [
+        {
+          "className": "fa-laptop",
+          "title": "闪电进入",
+          "href": "/index.html#/MRealTimePage",
+          "children": [
+            {
+              "title": "认证",
+              "href": "index"
+            },
+            {
+              "title": "基本资料",
+              "href": "boxed"
+            }
+          ]
+        },
+        {
+          "className": "fa-files-o",
+          "title": "绑卡",
+          "href": "/index.html#/AppRealTimePage",
+          "children": [
+            {
+              "title": "INS通过",
+              "href": "index"
+            },
+            {
+              "title": "用户确认数",
+              "href": "boxed"
+            }
+          ]
+        },
+        {
+          "className": "fa-files-o",
+          "title": "给数额",
+          "children": [
+            {
+              "title": "预审",
+              "href": "index"
+            },
+            {
+              "title": "详单月数",
+              "href": "boxed"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
