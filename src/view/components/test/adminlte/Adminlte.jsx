@@ -1,6 +1,6 @@
 import React, {Component /*,PropTypes*/} from 'react'
 import { Dashboard, Header,Sidebar } from 'react-adminlte-dash'
-//import tinycolor from 'tinycolor2'
+import tinycolor from 'tinycolor2'
 import user2 from './user2.jpg'
 import Index from '../utils/Index'
 import _ from 'underscore'
@@ -17,7 +17,7 @@ export default class Adminlte extends Component {
     }
     
     createSidebarChildren(){
-        const data = [
+/*        const data = [
             {
                 header: '实时监控',
                 className:'fa-dashboard',
@@ -128,13 +128,83 @@ export default class Adminlte extends Component {
                 }
                 </Sidebar.Menu>
             arr.push(sb)
-        })
-        /*const sidebarChildren =[
-            <Sidebar.Menu header="实时监控" key="3">5
+        })*/
+        const sidebarChildren = [
+            <Sidebar.UserPanel
+                name="Alexander Pierce"
+                image="public/user2-160x160.jpg"
+                online
+                key="1"
+            />,
+            <Sidebar.Search key="2" />,
+            <Sidebar.Menu header="MAIN NAVIGATION" key="3">
+                <Sidebar.Menu.Item icon={{ className: 'fa-dashboard' }} title="Dashboard Colors" >
+                    <Sidebar.Menu.Item
+                        icon={{ color: tinycolor('black').toString() }}
+                        onClick={() => this.pickTheme('skin-black')}
+                        title="Black"
+                    />
+                    <Sidebar.Menu.Item
+                        icon={{ color: tinycolor('black').lighten(10).toString() }}
+                        onClick={() => this.pickTheme('skin-black-light')}
+                        title="Black Light"
+                    />
+                    <Sidebar.Menu.Item
+                        icon={{ color: '#3c8dbc' }}
+                        onClick={() => this.pickTheme('skin-blue')}
+                        title="Blue"
+                    />
+                    <Sidebar.Menu.Item
+                        icon={{ color: tinycolor('#3c8dbc').lighten(10).toString() }}
+                        onClick={() => this.pickTheme('skin-blue-light')}
+                        title="Blue Light"
+                    />
+                    <Sidebar.Menu.Item
+                        icon={{ color: '#00a65a' }}
+                        onClick={() => this.pickTheme('skin-green')}
+                        title="Green"
+                    />
+                    <Sidebar.Menu.Item
+                        icon={{ color: tinycolor('#00a65a').lighten(10).toString() }}
+                        onClick={() => this.pickTheme('skin-green-light')}
+                        title="Green Light"
+                    />
+                    <Sidebar.Menu.Item
+                        icon={{ color: '#605ca8' }}
+                        onClick={() => this.pickTheme('skin-purple')}
+                        title="Purple"
+                    />
+                    <Sidebar.Menu.Item
+                        icon={{ color: tinycolor('#605ca8').lighten(10).toString() }}
+                        onClick={() => this.pickTheme('skin-purple-light')}
+                        title="Purple Light"
+                    />
+                    <Sidebar.Menu.Item
+                        icon={{ color: '#dd4b39' }}
+                        onClick={() => this.pickTheme('skin-red')}
+                        title="Red"
+                    />
+                    <Sidebar.Menu.Item
+                        icon={{ color: tinycolor('#dd4b39').lighten(10).toString() }}
+                        onClick={() => this.pickTheme('skin-red-light')}
+                        title="Red Light"
+                    />
+                    <Sidebar.Menu.Item
+                        icon={{ color: '#f39c12' }}
+                        onClick={() => this.pickTheme('skin-yellow')}
+                        title="Yellow"
+                    />
+                    <Sidebar.Menu.Item
+                        icon={{ color: tinycolor('#f39c12').lighten(10).toString() }}
+                        onClick={() => this.pickTheme('skin-yellow-light')}
+                        title="Yellow Light"
+                    />
+                </Sidebar.Menu.Item>
                 <Sidebar.Menu.Item
                     icon={{ className: 'fa-files-o' }}
                     labels={[{ key: 1, type: 'primary', text: '4' }]}
-                    title="Layout Options">
+                    title="Layout Options"
+                >
                     <Sidebar.Menu.Item title="Top Navigation" />
                     <Sidebar.Menu.Item title="Boxed" href="/boxed" />
                     <Sidebar.Menu.Item title="Fixed" />
@@ -208,75 +278,13 @@ export default class Adminlte extends Component {
                 </Sidebar.Menu.Item>
                 <Sidebar.Menu.Item active icon={{ className: 'fa-book' }} title="Documentation" />
             </Sidebar.Menu>,
-            <Sidebar.Menu header="系统管理" key="4">
-                <Sidebar.Menu.Item icon={{ className: 'fa-dashboard' }} title="主题设置" >
-                    <Sidebar.Menu.Item
-                        icon={{ color: tinycolor('black').toString() }}
-                        onClick={() => this.pickTheme('skin-black')}
-                        title="Black"
-                    />
-                    <Sidebar.Menu.Item
-                        icon={{ color: tinycolor('black').lighten(10).toString() }}
-                        onClick={() => this.pickTheme('skin-black-light')}
-                        title="Black Light"
-                    />
-                    <Sidebar.Menu.Item
-                        icon={{ color: '#3c8dbc' }}
-                        onClick={() => this.pickTheme('skin-blue')}
-                        title="Blue"
-                    />
-                    <Sidebar.Menu.Item
-                        icon={{ color: tinycolor('#3c8dbc').lighten(10).toString() }}
-                        onClick={() => this.pickTheme('skin-blue-light')}
-                        title="Blue Light"
-                    />
-                    <Sidebar.Menu.Item
-                        icon={{ color: '#00a65a' }}
-                        onClick={() => this.pickTheme('skin-green')}
-                        title="Green"
-                    />
-                    <Sidebar.Menu.Item
-                        icon={{ color: tinycolor('#00a65a').lighten(10).toString() }}
-                        onClick={() => this.pickTheme('skin-green-light')}
-                        title="Green Light"
-                    />
-                    <Sidebar.Menu.Item
-                        icon={{ color: '#605ca8' }}
-                        onClick={() => this.pickTheme('skin-purple')}
-                        title="Purple"
-                    />
-                    <Sidebar.Menu.Item
-                        icon={{ color: tinycolor('#605ca8').lighten(10).toString() }}
-                        onClick={() => this.pickTheme('skin-purple-light')}
-                        title="Purple Light"
-                    />
-                    <Sidebar.Menu.Item
-                        icon={{ color: '#dd4b39' }}
-                        onClick={() => this.pickTheme('skin-red')}
-                        title="Red"
-                    />
-                    <Sidebar.Menu.Item
-                        icon={{ color: tinycolor('#dd4b39').lighten(10).toString() }}
-                        onClick={() => this.pickTheme('skin-red-light')}
-                        title="Red Light"
-                    />
-                    <Sidebar.Menu.Item
-                        icon={{ color: '#f39c12' }}
-                        onClick={() => this.pickTheme('skin-yellow')}
-                        title="Yellow"
-                    />
-                    <Sidebar.Menu.Item
-                        icon={{ color: tinycolor('#f39c12').lighten(10).toString() }}
-                        onClick={() => this.pickTheme('skin-yellow-light')}
-                        title="Yellow Light"
-                    />
-                </Sidebar.Menu.Item>
+            <Sidebar.Menu header="LABELS" key="4">
                 <Sidebar.Menu.Item icon={{ color: 'danger' }} title="Danger" />
                 <Sidebar.Menu.Item icon={{ color: 'warning' }} title="Warning" />
                 <Sidebar.Menu.Item icon={{ color: 'information' }} title="Information" />
-            </Sidebar.Menu>
-        ]*/
-        return arr
+            </Sidebar.Menu>,
+        ]
+        return sidebarChildren
     }
 
     render() {
