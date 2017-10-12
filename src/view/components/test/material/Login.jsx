@@ -28,6 +28,9 @@ export default class Login extends Component {
         this.setState({...this.state, [name]: value})
     }
 
+    onClickCallBack(){
+        window.location.href = 'http://127.0.0.1:3005/index.html#/app'
+    }
     render() {
         const muiTheme = getMuiTheme({
             palette: {
@@ -42,8 +45,7 @@ export default class Login extends Component {
                 width: 200,
             },
             container: {
-                textAlign: 'center',
-                paddingTop: 200
+                textAlign: 'center'
             }
         }
 
@@ -73,6 +75,7 @@ export default class Login extends Component {
                                 type="password"
                             /><br/>
                             <FlatButton label="登  录" backgroundColor="#7681ff"
+                                        onClick={this.onClickCallBack.bind(this)}
                                         rippleColor="white"
                                         fullWidth={true}
                                         labelStyle={{color: 'white', fontSize: '15px'}}

@@ -3,7 +3,7 @@ import { Dashboard, Header,Sidebar } from 'react-adminlte-dash'
 import tinycolor from 'tinycolor2'
 import user2 from './user2.jpg'
 import Index from '../utils/Index'
-import _ from 'underscore'
+//import _ from 'underscore'
 
 export default class Adminlte extends Component {
     constructor(props) {
